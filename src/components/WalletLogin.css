@@ -1,0 +1,83 @@
+.wallet-login-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  text-align: center;
+  background: #0a0f0d;
+  border-radius: 20px;
+  border: 1px solid #1a472a;
+  box-shadow: 0 10px 30px rgba(26, 71, 42, 0.2);
+}
+
+.wallet-login-container h1 {
+  font-size: 2.5rem;
+  color: #2a623d;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: #0a0f0d;
+  text-transform: uppercase;
+}
+
+.connect-button, .disconnect-button {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 1px solid #1a472a;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.connect-button {
+  background: #1a472a;
+  color: #aaaaaa;
+  box-shadow: 0 4px 15px rgba(26, 71, 42, 0.2);
+}
+
+.connect-button:hover {
+  transform: translateY(-2px);
+  background: #2a623d;
+  box-shadow: 0 6px 20px rgba(26, 71, 42, 0.3);
+}
+
+.disconnect-button {
+  background: #1a472a;
+  color: #aaaaaa;
+  box-shadow: 0 4px 15px rgba(26, 71, 42, 0.2);
+}
+
+.disconnect-button:hover {
+  transform: translateY(-2px);
+  background: #2a623d;
+  box-shadow: 0 6px 20px rgba(26, 71, 42, 0.3);
+}
+
+.wallet-info {
+  margin-top: 30px;
+  padding: 25px;
+  background: #0a0f0d;
+  border-radius: 15px;
+  border: 1px solid #1a472a;
+  box-shadow: 0 4px 15px rgba(26, 71, 42, 0.1);
+}
+
+.wallet-info p {
+  font-size: 1.1rem;
+  color: #4a5d4e;
+  margin-bottom: 20px;
+  word-break: break-all;
+  background: #0a0f0d;
+}
+
+.error {
+  color: #4a5d4e;
+  margin: 15px 0;
+  padding: 12px;
+  background-color: #0a0f0d;
+  border: 1px solid #2a623d;
+  border-radius: 8px;
+  font-size: 0.95rem;
+} 

@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+.dashboard-wrapper {
+  min-height: 100vh;
+  background: #0a0f0d;
+  font-family: 'Irish Grover', cursive;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0f1613;
+  border-bottom: 1px solid #1a472a;
+  z-index: 100;
+}
+
+.nav-brand h1 {
+  color: #2a623d;
+  font-size: 1.5rem;
+  margin: 0;
+  background: transparent;
+  font-family: 'Irish Grover', cursive;
+}
+
+.nav-search {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 2rem;
+  background: transparent;
+}
+
+.nav-search input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #1a472a;
+  border-radius: 6px;
+  background: #0a0f0d;
+  color: #4a5d4e;
+  font-family: 'Irish Grover', cursive;
+}
+
+.nav-search input:focus {
+  outline: none;
+  border-color: #2a623d;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+}
+
+.wallet-address {
+  padding: 0.5rem 1rem;
+  background: #0a0f0d;
+  border: 1px solid #1a472a;
+  border-radius: 6px;
+  color: #4a5d4e;
+  font-family: monospace;
+}
+
+.add-btn, .logout-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #1a472a;
+  border-radius: 6px;
+  background: #1a472a;
+  color: #aaaaaa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Irish Grover', cursive;
+}
+
+.add-btn:hover, .logout-btn:hover {
+  background: #2a623d;
+  transform: translateY(-2px);
+}
+
+.main-content {
+  padding: 6rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.table-container {
+  background: #0a0f0d;
+  border: 1px solid #1a472a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.passwords-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0a0f0d;
+}
+
+.passwords-table th {
+  background: #0f1613;
+  color: #2a623d;
+  text-align: left;
+  padding: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid #1a472a;
+  font-family: 'Irish Grover', cursive;
+}
+
+.passwords-table td {
+  padding: 1rem;
+  color: #4a5d4e;
+  text-align: left;
+  border-bottom: 1px solid #1a472a;
+  background: transparent;
+  font-family: 'Irish Grover', cursive;
+}
+
+.passwords-table tr:hover td {
+  background: #0f1613;
+}
+
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  background: transparent;
+}
+
+.copy-btn, .delete-btn {
+  padding: 0.5rem;
+  border: 1px solid #1a472a;
+  border-radius: 4px;
+  background: #1a472a;
+  color: #aaaaaa;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover, .delete-btn:hover {
+  background: #2a623d;
+  transform: translateY(-2px);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 15, 13, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background: #0f1613;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #1a472a;
+  box-shadow: 0 4px 20px rgba(26, 71, 42, 0.3);
+}
+
+.modal h3 {
+  color: #2a623d;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background: transparent;
+  font-family: 'Irish Grover', cursive;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: transparent;
+}
+
+.modal form input {
+  padding: 0.75rem;
+  border: 1px solid #1a472a;
+  border-radius: 6px;
+  background: #0a0f0d;
+  color: #4a5d4e;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Irish Grover', cursive;
+}
+
+.modal form input:focus {
+  border-color: #2a623d;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(42, 98, 61, 0.2);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  background: transparent;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #1a472a;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-family: 'Irish Grover', cursive;
+}
+
+.modal-buttons button[type="submit"] {
+  background: #1a472a;
+  color: #aaaaaa;
+}
+
+.modal-buttons button[type="submit"]:hover {
+  background: #2a623d;
+  transform: translateY(-2px);
+}
+
+.modal-buttons button[type="button"] {
+  background: transparent;
+  color: #4a5d4e;
+  border-color: #1a472a;
+}
+
+.modal-buttons button[type="button"]:hover {
+  background: #0f1613;
+  color: #2a623d;
+}
+
+.error-message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #1a472a;
+  border-radius: 6px;
+  color: #4a5d4e;
+  background: #0f1613;
+  text-align: center;
+  font-family: 'Irish Grover', cursive;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  color: #2a623d;
+  background: #0a0f0d;
+  font-family: 'Irish Grover', cursive;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1rem;
+}
+
+.hamburger-menu span {
+  width: 100%;
+  height: 3px;
+  background-color: #2a623d;
+  transition: all 0.3s ease;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  background: transparent;
+  justify-content: end;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    flex-wrap: wrap;
+    padding: 1rem;
+    height: auto;
+    background: #0f1613;
+  }
+
+  .nav-brand {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    background: transparent;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .nav-content {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 1rem;
+  }
+
+  .nav-content.open {
+    display: flex;
+  }
+
+  .nav-search {
+    width: 92%;
+    margin: 0.5rem 0;
+    order: 1;
+  }
+
+  .nav-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    order: 2;
+  }
+
+  .wallet-address {
+    width: 92%;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .add-btn, .logout-btn {
+    width: 100%;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger-menu.open span:first-child {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.open span:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Adjust main content padding */
+  .main-content {
+    padding-top: 4.5rem;
+  }
+}
+
+/* Additional improvements for very small screens */
+@media (max-width: 380px) {
+  .navbar {
+    padding: 0.8rem;
+  }
+
+  .nav-content {
+    gap: 0.4rem;
+  }
+
+  .nav-actions {
+    gap: 0.4rem;
+  }
+
+  .wallet-address, 
+  .add-btn, 
+  .logout-btn {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-search input {
+    padding: 0.7rem;
+  }
+}
+
+/* Animation for menu opening/closing */
+.nav-content {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-content.open {
+  animation: slideDown 0.3s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Landscape mode adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .navbar {
+    position: relative;
+  }
+
+  .modal {
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  .modal form {
+    gap: 0.5rem;
+  }
+}
+
+/* Improve form inputs */
+.modal form input {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #1a472a;
+  border-radius: 6px;
+  background: #0a0f0d;
+  color: #4a5d4e;
+  transition: all 0.3s ease;
+}
+
+.modal form input:focus {
+  border-color: #2a623d;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(42, 98, 61, 0.2);
+}
+
+/* Add loading animation */
+.loading-spinner {
+  border: 3px solid #1a472a;
+  border-radius: 50%;
+  border-top: 3px solid #2a623d;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Improve table empty state */
+.passwords-table tbody:empty:before {
+  content: 'No passwords saved yet';
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  color: #4a5d4e;
+  font-style: italic;
+  font-family: 'Irish Grover', cursive;
+}
+
+/* Add tooltip styles */
+.tooltip {
+  position: relative;
+}
+
+.tooltip:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  background: #1a472a;
+  color: #aaaaaa;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  font-family: 'Irish Grover', cursive;
+}
+
+.tooltip:hover:before {
+  opacity: 1;
+  visibility: visible;
+} 
