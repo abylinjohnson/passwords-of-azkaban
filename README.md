@@ -24,8 +24,8 @@ A modern, secure password manager built with React and Web3 technology. CryptoVa
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/cryptovault.git
-cd cryptovault
+git clone https://github.com/abylinjohnson/passwords-of-azkaban
+cd passwords-of-azkaban
 ```
 
 2. Install dependencies:
